@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "Mouser-Samec")(type "KiCad")(uri "/Users/racini/Documents/KiCad Custom Libraries/SamacSys_Parts.pretty")(options "")(descr ""))
+  (lib (name "Keystone")(type "KiCad")(uri "${CUSTOM_RAC1}/Keystone")(options "")(descr ""))
+)

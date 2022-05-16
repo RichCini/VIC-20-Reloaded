@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name "VIC-Reloaded-rescue")(type "Legacy")(uri "${KIPRJMOD}/VIC-Reloaded-rescue.lib")(options "")(descr "")(disabled))
+  (lib (name "cbm")(type "Legacy")(uri "/Users/racini/Documents/Kicad-libs-RCini/cbm.lib")(options "")(descr ""))
+  (lib (name "Mouser-Samac")(type "Legacy")(uri "/Users/racini/Documents/KiCad Custom Libraries/SamacSys_Parts.lib")(options "")(descr ""))
+  (lib (name "VIC20Reloaded-1.0-001-rescue")(type "Legacy")(uri "${KIPRJMOD}/VIC20Reloaded-1.0-001-rescue.lib")(options "")(descr ""))
+  (lib (name "VIC20Reloaded-1.1-001-rescue")(type "Legacy")(uri "${KIPRJMOD}/VIC20Reloaded-1.1-001-rescue.lib")(options "")(descr ""))
+  (lib (name "RAC_Custom")(type "Legacy")(uri "${CUSTOM_RAC1}/RAC_Custom.lib")(options "")(descr ""))
+)

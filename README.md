@@ -17,7 +17,10 @@ similar to the original. Parts designators are the same.
 
 # How is this version different?
 My main goal was to reimplement the VIC in a smaller form factor. I was able to squeeze it
-{mostly} into an S-100 format (which is 10" x 5"; actual is 10.375" x 5.375"). 
+{mostly} into an S-100 format (which is 10" x 5"; actual is 10.375" x 5.375") size. As such,
+this board isn't a drop-in replacement. However, the spacing and placement of the side 
+(power/joystick) and the rear (expansion cartridge, video, serial IEC) are
+placed at the correct distances from the upper-right corner.
 
 Due to the smaller form factor, the cassette port was eliminated (instead opting for a 
 6-pin header for an external driver) and the user port was moved to the left side. The 
@@ -29,5 +32,7 @@ cassette port), and the power switch is slightly different due to parts availabi
 I also added a small fuse on the keyboard connector to facilitate using it with an 
 off-board PS/2 converter.
 
-Also, since the board is autorouted to a smaller footprint, circuit paths and keepout
+Since the board is autorouted to a smaller footprint, circuit paths and keepout
 areas are different.
+
+

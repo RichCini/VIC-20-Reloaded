@@ -48,5 +48,10 @@ areas are different from the original.
             Corrected. Works.
 
 ## Known Bugs
-Current Release: None
+Current Release (1.1-002D): 
+* An error was introduced in this version as a result of rearranging the data bus lines
+  lines on IC UF8 (74LS245). D4 (pin 4) and D5 (pin 5) were reversed. There is a picture
+  (ECO_001) which indicates a convenient place to cut two traces and cross-wire them.
+  Will be fixed in the next version.
+  
 

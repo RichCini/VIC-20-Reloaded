@@ -46,9 +46,13 @@ areas are different from the original.
 * v1.1-001: Second prototype with a rearranged chip layout; screen artifacts.
 * v1.1-002: Third prototype. A transcription error was found in the original schematic.  
             Corrected. Works.
+* v1.1-002E: Final version.
 
 ## Known Bugs
-Current Release (1.1-002D): 
+Current Release (1.1-002E):
+* None
+
+Prior Release (1.1-002D): 
 * An error was introduced in this version as a result of rearranging the data bus lines
   lines on IC UF8 (74LS245). D4 (pin 4) and D5 (pin 5) were reversed. There is a picture
   (ECO_001) which indicates a convenient place to cut two traces and cross-wire them.

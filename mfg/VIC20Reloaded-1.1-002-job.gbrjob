@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "(6.0.4-0)"
     },
-    "CreationDate": "2022-05-16T08:16:05-04:00"
+    "CreationDate": "2022-08-07T13:12:03-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "VIC20Reloaded-1.1-002",
       "GUID": "56494332-3052-4656-9c6f-616465642d31",
-      "Revision": "1.1-002D"
+      "Revision": "1.1-002E"
     },
     "Size": {
       "X": 263.115,
@@ -24,8 +24,8 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.2,
-      "PadToTrack": 0.2,
+      "PadToPad": 0.0,
+      "PadToTrack": 0.0,
       "TrackToTrack": 0.2,
       "MinLineWidth": 0.25,
       "TrackToRegion": 0.508,

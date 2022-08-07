@@ -28,14 +28,15 @@ placed at the correct distances from the upper-right corner.
 Due to the smaller form factor, the cassette port was eliminated (instead opting for a 
 6-pin header for an external driver) and the user port was moved to the left side. The 
 orientation of the expansion connector was changed to vertical (more like the Atari 2600
-which saved about 2" of board space).
+which saved about 2" of board space). Using the expansion connector is limited to one
+cartridge, or an expansion board that uses two pieces connected by a cable (there is
+another repro here that has an example).
 
 ### Power
 Electrically, I opted for a single 5V power supply (9VAC wasn't needed as there is no
 cassette port), and the power switch is slightly different due to parts availability.
-The main fuse holder is different (but the same 5x20mm fuse is used), and I added
-a small fuse on the keyboard connector to facilitate using it with an off-board PS/2 
-keyboard converter.
+The main fuse holder is different, but the same 5x20mm fuse is used. Large axial
+capacitor was replaced with smaller radial cap of the same value.
 
 ### Other
 Since the board is autorouted to a smaller footprint, circuit paths and keepout

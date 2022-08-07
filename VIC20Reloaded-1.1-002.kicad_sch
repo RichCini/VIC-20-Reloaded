@@ -6,8 +6,8 @@
 
   (title_block
     (title "VIC RELOADED")
-    (date "2022-05-14")
-    (rev "1.1-002D")
+    (date "2022-08-04")
+    (rev "1.1-002E")
     (company "Steve J. Gray and Rich Cini")
     (comment 1 "Transcribed from CBM VIC-20cr schematics 251027-01D")
     (comment 2 "ECO 830151 4/12/83")
@@ -22,8 +22,8 @@
     (effects (font (size 1.524 1.524)) (justify left bottom))
     (uuid 0c5dddf1-38df-43d2-b49c-e7b691dab0ab)
   )
-  (text "Revisions:\n1.0-000 -> 000A: \n  1/18/2021: Sullins cartridge connector is not designed as row_first,\n             so the footprint has to be flipped in order to work.\n             Also added input power filtering and large filter cap.\n  1/20/2021: Added cassette output header for future cassette use.\n  1/23/2021: Added additional power input filtering; fixed power bus on\n              clock oscillator pull-ups.\n\n1.0-001 -> 1.1-001\n  1/1/2022: Updated/compared to 251027-01D. Rearranged LS245 \n  signal orderings.\n\n1.1-001 -> 1.1-002\n  4/24/2022: Updated/compared to 251027-01D. Discovered that a\n  transcription error was introduced on the 6116 R/W pin. Moved\n  to VR/W. Screen is better, but not perfect so swapped char\n  ROM and now it's perfect. Seemingly there is corrpution in\n  the ROM I was using.\n\n1.1-002 -> 1.1-002A/B\n  5/3/2022: Minor changes. B version adds card edge for User\n  Port.\n\n1.1-002B -> 1.1-002C\n  5/7/2022: Realigned top and right side connectors/switches to\n  match measurements in the prototype; added second header for\n  user port.\n\n1.1-002C -> 1.1-002D\n  5/14/22: removed ground trace round VIC to improve routing.\n  Added spot for a Polyfuse in case of using external\n  keyboard encoder, and a main system fuse.\n"
-    (at 176.53 95.25 0)
+  (text "Revisions:\n1.0-000 -> 000A: \n  1/18/2021: Sullins cartridge connector is not designed as row_first,\n             so the footprint has to be flipped in order to work.\n             Also added input power filtering and large filter cap.\n  1/20/2021: Added cassette output header for future cassette use.\n  1/23/2021: Added additional power input filtering; fixed power bus on\n              clock oscillator pull-ups.\n\n1.0-001 -> 1.1-001\n  1/1/2022: Updated/compared to 251027-01D. Rearranged LS245 \n  signal orderings.\n\n1.1-001 -> 1.1-002\n  4/24/2022: Updated/compared to 251027-01D. Discovered that a\n  transcription error was introduced on the 6116 R/W pin. Moved\n  to VR/W. Screen is better, but not perfect so swapped char\n  ROM and now it's perfect. Seemingly there is corrpution in\n  the ROM I was using.\n\n1.1-002 -> 1.1-002A/B\n  5/3/2022: Minor changes. B version adds card edge for User\n  Port.\n\n1.1-002B -> 1.1-002C\n  5/7/2022: Realigned top and right side connectors/switches to\n  be closer to the prototype; added second header for user port.\n\n1.1-002C -> 1.1-002D\n  5/14/22: removed ground fence round VIC to improve routing.\n  Added spot for a Polyfuse in case of using external\n  keyboard encoder, and a main system fuse.\n\n1.1-002D -> 1.1-002E\n  8/2/22: BD4 and BD5 were swapped on UF8 in D version in\n  the process or reordering bits. ECO_001 to 002D.\n  Added 5th mounting hole. Added S-video option. Moved\n  rear connectors to better match prototype. Removed PolyFuse\n  on the keyboard (seems unnecessary and created routing\n  issues with shifted connectors).\n"
+    (at 176.53 118.745 0)
     (effects (font (size 1.524 1.524)) (justify left bottom))
     (uuid ca56e1ad-54bf-4df5-a4f7-99f5d61d0de9)
   )
@@ -158,9 +158,6 @@
     )
     (path "/00000000-0000-0000-0000-000068a5a0ea/00000000-0000-0000-0000-000068c6f167"
       (reference "#PWR0124") (unit 1) (value "VCC") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000068a5a0ea/00000000-0000-0000-0000-000068c6f16d"
-      (reference "#PWR0125") (unit 1) (value "VCC") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000068a5a0ea/00000000-0000-0000-0000-000068c6f173"
       (reference "#PWR0126") (unit 1) (value "VCC") (footprint "")
@@ -456,6 +453,9 @@
     (path "/00000000-0000-0000-0000-000068b00abc/00000000-0000-0000-0000-000061fd35e4"
       (reference "#PWR0401") (unit 1) (value "GND") (footprint "")
     )
+    (path "/00000000-0000-0000-0000-000068a5a0ea/6cc21d1f-854c-4f57-9608-9b92768bb7aa"
+      (reference "#PWR?") (unit 1) (value "VCC") (footprint "")
+    )
     (path "/00000000-0000-0000-0000-000068b00abc/00000000-0000-0000-0000-00005ff104ab"
       (reference "C1") (unit 1) (value "0.1uF") (footprint "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm")
     )
@@ -466,16 +466,16 @@
       (reference "C3") (unit 1) (value "0.1uF") (footprint "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm")
     )
     (path "/00000000-0000-0000-0000-000068b00abc/00000000-0000-0000-0000-0000696b4584"
-      (reference "C4") (unit 1) (value "2.2uF") (footprint "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm")
+      (reference "C4") (unit 1) (value "2.2uF") (footprint "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm")
     )
     (path "/00000000-0000-0000-0000-000068b00abc/00000000-0000-0000-0000-0000696b4570"
-      (reference "C5") (unit 1) (value "0.47uF") (footprint "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm")
+      (reference "C5") (unit 1) (value "0.47uF") (footprint "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm")
     )
     (path "/00000000-0000-0000-0000-000068b00abc/00000000-0000-0000-0000-00006a1abff5"
-      (reference "C6") (unit 1) (value "2.2uF") (footprint "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm")
+      (reference "C6") (unit 1) (value "2.2uF") (footprint "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm")
     )
     (path "/00000000-0000-0000-0000-000068b00abc/00000000-0000-0000-0000-00006a1abfa5"
-      (reference "C7") (unit 1) (value "0.47uF") (footprint "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm")
+      (reference "C7") (unit 1) (value "0.47uF") (footprint "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm")
     )
     (path "/00000000-0000-0000-0000-000068b00abc/00000000-0000-0000-0000-00006a1abfc1"
       (reference "C8") (unit 1) (value "0.1uF") (footprint "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm")
@@ -576,11 +576,11 @@
     (path "/00000000-0000-0000-0000-000068b00abc/00000000-0000-0000-0000-0000695f7eec"
       (reference "C50") (unit 1) (value "15pF") (footprint "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm")
     )
+    (path "/00000000-0000-0000-0000-000068b00abc/4a21fe1f-7ff5-49b1-8b28-f7e23df03f71"
+      (reference "C201") (unit 1) (value "0.1uF") (footprint "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm")
+    )
     (path "/00000000-0000-0000-0000-000068a5a0ea/00000000-0000-0000-0000-000068d85f6f"
       (reference "CN1") (unit 1) (value "CONN_01X03") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-    )
-    (path "/00000000-0000-0000-0000-000068a5a0ea/e30328f3-3947-4517-b659-02fbb9cd86da"
-      (reference "F1") (unit 1) (value "Polyfuse 0.25A") (footprint "Fuse:Fuse_Littelfuse_395Series")
     )
     (path "/00000000-0000-0000-0000-000068a5a0ea/4ca3a25b-02e3-4094-a187-642c6e1c7510"
       (reference "F2") (unit 1) (value "2.5A") (footprint "Keystone:FUSE_4527")
@@ -656,6 +656,15 @@
     )
     (path "/00000000-0000-0000-0000-000068b00abc/00000000-0000-0000-0000-00006024af9a"
       (reference "H8") (unit 1) (value "MountingHole_Pad") (footprint "MountingHole:MountingHole_2.2mm_M2_Pad")
+    )
+    (path "/00000000-0000-0000-0000-000068b00abc/96a9b4c9-d957-449e-803a-006386d3f75a"
+      (reference "H9") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad")
+    )
+    (path "/00000000-0000-0000-0000-000068b00abc/069183c4-3c5e-4d66-ac80-d348cd0ae976"
+      (reference "J201") (unit 1) (value "Chroma Disconnect") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x01_P2.54mm_Vertical")
+    )
+    (path "/00000000-0000-0000-0000-000068b00abc/6c317815-572b-48b3-82ef-81ce71773e66"
+      (reference "J202") (unit 1) (value "SVID_E") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
     )
     (path "/00000000-0000-0000-0000-000068a5a0ea/a4a7eeec-edc1-4129-be65-5a2f7018b70b"
       (reference "J301") (unit 1) (value "Conn_02x12_Odd_Even") (footprint "Connector_PinHeader_2.54mm:PinHeader_2x12_P2.54mm_Vertical")
@@ -776,6 +785,9 @@
     )
     (path "/00000000-0000-0000-0000-000068b00abc/00000000-0000-0000-0000-00006952285b"
       (reference "R41") (unit 1) (value "240") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical")
+    )
+    (path "/00000000-0000-0000-0000-000068b00abc/bb70f3ba-90e5-45ab-b9f3-469277a94ba1"
+      (reference "R201") (unit 1) (value "75") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical")
     )
     (path "/00000000-0000-0000-0000-000068a5a0ea/00000000-0000-0000-0000-000068d85f5c"
       (reference "SW1") (unit 1) (value "Power") (footprint "Mouser-Samec:M2022TXW41DA")

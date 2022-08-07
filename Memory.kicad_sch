@@ -6,8 +6,8 @@
 
   (title_block
     (title "VIC RELOADED")
-    (date "2022-05-14")
-    (rev "1.1-002D")
+    (date "2022-08-04")
+    (rev "1.1-002E")
     (company "Steve J. Gray and Rich Cini")
     (comment 1 "Transcribed from CBM VIC-20cr schematics 251027-01D")
     (comment 2 "ECO 830151 4/12/83")

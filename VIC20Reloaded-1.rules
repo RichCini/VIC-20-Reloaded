@@ -1,0 +1,135 @@
+
+(rules PCB VIC20Reloaded-1
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout on)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 113153)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.9)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.5)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 0.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800.014:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800.014:400_um" "Via[0-1]_800.014:400_um" default
+  )
+  (via 
+    "Via[0-1]_800.014:400_um-kicad_default" "Via[0-1]_800.014:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800.014:400_um-Ground" "Via[0-1]_800.014:400_um" Ground
+  )
+  (via 
+    "Via[0-1]_800.014:400_um-Power" "Via[0-1]_800.014:400_um" Power
+  )
+  (via_rule
+    default "Via[0-1]_800.014:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800.014:400_um-kicad_default"
+  )
+  (via_rule
+    Ground "Via[0-1]_800.014:400_um-Ground"
+  )
+  (via_rule
+    Power "Via[0-1]_800.014:400_um-Power"
+  )
+  (class default
+    "Net-(C3-Pad1)" "Net-(C8-Pad1)" VICAUDIO "Net-(C10-Pad1)" "AUDIO_OUT" "Net-(C11-Pad1)" "Net-(C13-Pad2)" "Net-(C13-Pad1)"
+    "Net-(C15-Pad1)" "Net-(C17-Pad2)" "Net-(C17-Pad1)" POTX POTY "Net-(C41-Pad1)" "Net-(C42-Pad1)" "Net-(C48-Pad2)"
+    "Net-(C48-Pad1)" "Net-(CN1-Pad1)" "Net-(CN1-Pad2)" "Net-(FB1-Pad2)" "Net-(FB3-Pad1)" "Net-(FB4-Pad2)" "VIC_01" "Net-(FB5-Pad2)"
+    "VIC_02" "Net-(FB7-Pad2)" RESET CHROMA E "Net-(FB10-Pad1)" "Net-(FB11-Pad2)" S00
+    "Net-(FB12-Pad2)" S01 "Net-(FB13-Pad2)" S02 "SER_CLK_IN" "Net-(FB14-Pad1)" "SER_ATN_IN" "Net-(FB15-Pad1)"
+    "SER_DATA_IN" "Net-(FB16-Pad1)" "SER_SRQ" "VIDEO_OUT" LPEN COL7 JOY2 JOY1
+    JOY0 ROW0 ROW1 ROW2 ROW3 ROW4 ROW5 ROW6
+    ROW7 COL0 COL1 COL2 COL4 COL5 COL6 RESTORE
+    "unconnected-(P1-Pad10)" IRQ NMI "Net-(R3-Pad2)" "Net-(R5-Pad2)" "Net-(R5-Pad1)" "CEN_B" VR#W
+    "AUDIO_IN" LUMA "CS_RAM1" "Net-(U13-Pad5)" "unconnected-(P1-Pad11)" "Net-(U13-Pad4)" "Net-(U13-Pad10)" "unconnected-(P6-Pad39)"
+    "Net-(U13-Pad9)" "CS_RAM2" VA8 BD2 VA9 BD1 R#W BD0
+    VA0 VA10 VA1 VA2 BD7 VA3 BD6 VA4
+    BD5 VA5 BD4 VA6 BD3 VA7 "SER_CLK_OUT" "SER_DATA_OUT"
+    A0 A1 A2 A3 A5 "IO_0" "VIA1_CB2" "VIA1_CB1"
+    PB7 PB6 PB5 PB4 PB3 PB2 PB1 PB0
+    "SER_ATN_OUT" A4 "unconnected-(P8-Pad2)" "unconnected-(SW1-Pad3)" "Net-(UB4-Pad1)" "unconnected-(SW1-Pad6)" "unconnected-(SW1-PadMH1)" VA13
+    VA12 VA11 VD8 VD9 VD10 VD11 "unconnected-(SW1-PadMH2)" "Net-(UC2-Pad13)"
+    "Net-(UC2-Pad6)" BLK0 "Net-(UC2-Pad11)" "Net-(UC2-Pad4)" COLOR "Net-(UC2-Pad2)" "Net-(UC2-Pad1)" "CPU_02"
+    "Net-(UC3-Pad10)" "CS_RAM0" RAM1 RAM2 RAM3 BLK7 BLK1 BLK2
+    BLK3 BLK4 A15 BLK5 A14 BLK6 A13 "unconnected-(U13-Pad3)"
+    "IO_3" "unconnected-(U13-Pad11)" "unconnected-(UB4-Pad8)" "unconnected-(UB4-Pad9)" A12 A11 "IO_2" A10
+    A7 A6 "DATA_E" "unconnected-(UB6-Pad5)" A8 A9 "unconnected-(UB7-Pad1)" "unconnected-(UB7-Pad36)"
+    "unconnected-(UC6-Pad12)" D0 D1 D2 D3 D4 D5 D6
+    "unconnected-(UC6-Pad13)" D7 "unconnected-(UC6-Pad14)" "unconnected-(UC6-Pad15)" "unconnected-(UE8-Pad9)" "unconnected-(UE8-Pad11)" "unconnected-(UE10-Pad5)" "unconnected-(UE10-Pad7)"
+    "unconnected-(UE10-Pad35)" "unconnected-(UE10-Pad36)" "CASS_SW" "CASS_W" "CASS_R" "CASS_MOT" "unconnected-(J301-Pad20)" "unconnected-(J301-Pad22)"
+    "unconnected-(P7-Pad3)" "Net-(C201-Pad2)" "Net-(FB8-Pad2)" SVIDC "Net-(J202-Pad2)"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Ground
+    GND /Input/Output/VINM
+    (clearance_class Ground)
+    (via_rule Ground)
+    (rule
+      (width 1000.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power
+    VCC /Input/Output/VINP /Input/Output/RAWP /Input/Output/VINP2
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 1500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

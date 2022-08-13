@@ -1,0 +1,55 @@
+VIC20cr Reloaded Build Process
+2022-08-13
+
+
+In general, I build boards by component height rather than function. The former allows
+for an easier bench build, while the latter enables testing by functional area of the
+board. Each has its relative benefits which depend on the builder's confidence in 
+building complex boards. I would note that some components are relatively expensive
+(the expansion connector, the power switch, and the DE9M, for example) so I leave those
+out until I confirm the board works.
+
+Component-Oriented Build
+========================
+ 1.	Axial components:
+	Resistors: R1-3, R14-19, R23, R29
+	Ferrites: FB3, FB6, FB10, FB12-16
+	Inductors: L1
+	
+ 2.	DIP Sockets. If the builder is using crimp-pin style sockets rather than the straight
+	or machine pin, I recommend soldering them such that the iron rests on the knee
+ 	of the crimp and solder is applied in and around the vacant area under the pin
+ 	opposite where the iron is resting. That way, the solder fills the entire area.
+
+ 3.	Radial components:
+	Capacitors: C8, C11, C13, C20-21, C31-32; all bypass caps, C48
+	Inductors: L3
+
+ 4.	Axial (folded) components:
+	Resistors: R5-8, R11-13, R27-28, R40-41
+	Ferrites: FB1,2,4,5,8,9,11
+	
+ 5.	Transistors
+
+ 6.	Other capacitors: C4,6,7,15,17,42
+
+ 7.	Crystal and ground wire
+
+ 8.	Headers P2, P8, CN1, J301
+
+ 9.	Capacitor C33
+
+10.	Switch SW1
+
+11.	Power jack P7
+
+12. 	Fuse F7
+
+13.	Joystick P5
+
+14. 	Serial IEC/Video P3,P4
+
+15.	Expansion Connector P6. Use two small 4-40 screws to secure to the board to 
+	provide some strain relief.
+
+

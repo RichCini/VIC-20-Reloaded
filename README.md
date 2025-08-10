@@ -51,7 +51,10 @@ areas are different from the original.
 
 ## Known Bugs
 Current Release (1.1-002E):
-* None
+* The signal flag "S01" was incorrectly used for the CPU PHI1 output. The system works
+  with this improperly connected signal, but the fix is to lift pins UE10.3 and UC3.3
+  and connect them with a jumper. The way the traces are routed make it hard to make a
+  single-cut fix.
 
 Prior Release (1.1-002D): 
 * An error was introduced in this version as a result of rearranging the data bus lines
